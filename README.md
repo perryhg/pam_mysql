@@ -2,6 +2,17 @@
 pam_mysql - A PAM authentication module against MySQL database.
 $Id: README,v 1.8.2.9 2006/01/09 10:35:59 moriyoshi Exp $
 
+## update since the original release(2006/01/09)
+> applied with pam_mysql_la_LIBADD patch
+see [patch.txt](patch.txt)
+> database script
+create table vpnuser (
+name varchar(20) NOT NULL, 
+password varchar(128) default NULL,
+active int(10) NOT NULL DEFAULT 1,
+PRIMARY KEY (name)
+);
+
 Introduction
 ------------
 This is a successor of the "old" pam_mysql module, which comes with
@@ -19,10 +30,8 @@ Installation instruction
 See INSTALL file for detail.
 
 An example of the configuration file:
----------------------------------------------------------------
-auth       optional     pam_mysql.so user=root passwd=password
-account    required     pam_mysql.so user=root passwd=password
----------------------------------------------------------------
+>auth optional pam_mysql.so user=vpnuser passwd=vpnpassword host=localhost db=vpn table=vpnuser usercolumn=name passwdcolumn=password where=active=1 crypt=2
+>account required pam_mysql.so user=vpnuser passwd=vpnpassword host=localhost db=vpn table=vpnuser usercolumn=name passwdcolumn=password where=active=1 crypt=2
 
 Available options
 -----------------
