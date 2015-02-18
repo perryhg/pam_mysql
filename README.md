@@ -3,10 +3,10 @@ pam_mysql - A PAM authentication module against MySQL database.
 $Id: README,v 1.8.2.9 2006/01/09 10:35:59 moriyoshi Exp $
 
 ## update since the original release(2006/01/09)
-> applied with pam_mysql_la_LIBADD patch
+* applied with pam_mysql_la_LIBADD patch
 see [patch.txt](patch.txt)
-> database script
-create table vpnuser (
+* database script
+>create table vpnuser (
 name varchar(20) NOT NULL, 
 password varchar(128) default NULL,
 active int(10) NOT NULL DEFAULT 1,
