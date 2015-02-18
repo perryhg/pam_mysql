@@ -33,8 +33,8 @@ Installation instruction
 See INSTALL file for detail.
 
 An example of the configuration file:
->auth optional pam_mysql.so user=vpnuser passwd=vpnpassword host=localhost db=vpn table=vpnuser usercolumn=name passwdcolumn=password where=active=1 crypt=2
->account required pam_mysql.so user=vpnuser passwd=vpnpassword host=localhost db=vpn table=vpnuser usercolumn=name passwdcolumn=password where=active=1 crypt=2
+ - auth optional pam_mysql.so user=vpnuser passwd=vpnpassword host=localhost db=vpn table=vpnuser usercolumn=name passwdcolumn=password where=active=1 crypt=2
+ - account required pam_mysql.so user=vpnuser passwd=vpnpassword host=localhost db=vpn table=vpnuser usercolumn=name passwdcolumn=password where=active=1 crypt=2
 
 Available options
 -----------------
