@@ -1,0 +1,11 @@
+--- Makefile.in.chold   2008-07-14 10:25:53.000000000 +0200
++++ Makefile.in 2008-07-14 10:26:06.000000000 +0200
+@@ -110,7 +110,7 @@
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+-pam_mysql_la_LIBADD = 
++pam_mysql_la_LIBADD = -lpam
+ pam_mysql_la_OBJECTS =  pam_mysql.lo
+ CFLAGS = @CFLAGS@
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
