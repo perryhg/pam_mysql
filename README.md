@@ -13,7 +13,8 @@ name varchar(20) NOT NULL,
 password varchar(128) default NULL,
 active int(10) NOT NULL DEFAULT 1,
 PRIMARY KEY (name)
-);```
+);
+```
 
 Introduction
 ------------
