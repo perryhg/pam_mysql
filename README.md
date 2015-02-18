@@ -7,12 +7,12 @@ $Id: README,v 1.8.2.9 2006/01/09 10:35:59 moriyoshi Exp $
 see [patch.txt](patch.txt)
 * database script
 
-	create table vpnuser (
-	name varchar(20) NOT NULL, 
-	password varchar(128) default NULL,
-	active int(10) NOT NULL DEFAULT 1,
-	PRIMARY KEY (name)
-	);
+`create table vpnuser (
+name varchar(20) NOT NULL, 
+password varchar(128) default NULL,
+active int(10) NOT NULL DEFAULT 1,
+PRIMARY KEY (name)
+);`
 
 Introduction
 ------------
